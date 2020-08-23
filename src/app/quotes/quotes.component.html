@@ -2,11 +2,30 @@
     <h1>Inspirational Quotes</h1>
     <h2>Get inspired daily</h2>
     <hr>
+    <!-- <div class="row">
+        <div class="col-md-6">
+            <div *ngFor='let quotes of quotes;let i =index'>
+            </div>
+                <h6 id={{i}}>{{quotes.name}} Added on {{quotes.completeDate|date|uppercase}}</h6>
+            <button (click) ='toggleDetails(i)' class="btn btn-dark">DISPLAY</button>
+            </div>
+    </div> -->
     <div class="row">
         <div class="col-md-6">
-            <!-- <div *ngFor='let quotes of Quotes;let i =index'></div>
-            <h6 id={{i}}>{{quotes.name}} Added on {{quotes.completeDate|date|uppercase}}</h6>
-            <button (click) ='toggleDetails(i)' class="btn btn-dark">DISPLAY</button> -->
+          <div *ngFor='let quotes of quotes;let i = index'>
+            <div>
+              <h6 id={{i}}>{{quotes.name}} Added on {{quotes.completeDate|date|uppercase}}</h6>
+              <button (click)='toggleDetails(i)' class="btn btn-primary">DISPLAY</button>
+            </div>
+    
+            <div *ngIf='quote.showDescription'>
+              <app-quotes-detail  [quotes]='quotes' (isComplete) = 'deleteQuotes($event,i)'></app-quotes-detail>
+            </div>
+          </div>
         </div>
-    </div>
+        <div class="col-md-6">
+          <app-quotes-form  (addQuotes)="addNewQuote($event)"></app-quotes-form>
+        </div>
+      </div>
+      <p *ngIf='quotes.length > 3'></p>
 </div>
