@@ -7,6 +7,9 @@ import {Quotes} from './quotes'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error("Method not implemented.");
+  }
   quotes:Quotes[] =[
     new Quotes(1,'Spread love everywhere you go. Let no one ever come to you without leaving happier', 'Mother Teresa', new Date(1990,3,14)),
     new Quotes (2,'When you reach the end of your rope, tie a knot in it and hang on','Franklin D. Roosevelt', new Date(1993,2,15)),
