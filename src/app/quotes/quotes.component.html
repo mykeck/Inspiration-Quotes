@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="background-color: skyblue;">
     <h1 style="text-align: center; margin-bottom: 5;">Inspirational Quotes</h1>
     <h2>Get inspired daily</h2>
     <hr>
@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <app-quotes-form  (addQuotes)="addNewQuote($event)"></app-quotes-form>
+          <app-quotes-form  (addQuote)="addNewQuote($event)"></app-quotes-form>
         </div>
       </div>
       <p *ngIf='quotes.length > 3'></p>

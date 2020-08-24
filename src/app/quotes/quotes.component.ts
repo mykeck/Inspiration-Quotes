@@ -30,11 +30,12 @@ export class QuotesComponent implements OnInit {
     }
    }
  }
- addNewQuote(quotes: Quotes){
+ addNewQuote(quote){
   let QuotesLength = this.quotes.length;
-  quotes.id = QuotesLength+1;
-  quotes.completeDate = new Date(quotes.completeDate)
-  this.quotes.push(quotes)
+  quote.id = QuotesLength+1;
+  quote.completeDate = new Date(quote.completeDate);
+  let quoteObject = new Quotes(quote.id,quote.description,quote.name,quote.completeDate);
+  this.quotes.push(quoteObject);
 }
   constructor() { }
 
