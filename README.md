@@ -1,5 +1,5 @@
  ## Inspirational quotes
-[Check it out]( )
+[Check it out](https://mykeck.github.io/Inspiration-Quotes/ )
 ## Description.
 A web application for a quotes application that will help people get inspiration and also inspire others through adding their own quotes. Users can also be able to upvote or downvote the quotes and the quote with the highest upvote will be highlighted.
 ## Author
