@@ -13,7 +13,7 @@ export class QuotesComponent implements OnInit {
   new Quotes (3, 'We cannot solve our problems with the same thinking we used when we created them','Albert Einstein', new Date(1900,1,20)),
   new Quotes (4, 'If you can dream it, you can do it','Walt Disney', new Date(2000,5,10)),
  ]
- toggleDetails(index: string| number){
+ toggleDetails(index ){
    this.quotes[index].showDescription = !this.quotes[index].showDescription;
  }
  completeQuotes(isComplete: any, index: number){
