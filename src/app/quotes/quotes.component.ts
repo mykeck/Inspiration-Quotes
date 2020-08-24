@@ -18,15 +18,15 @@ export class QuotesComponent implements OnInit {
  }
  completeQuotes(isComplete: any, index: number){
    if (isComplete){
-     this.quotes.splice(index,1)
+     this.quotes.splice(index,1);
     }
  }
- deleteQuotes(isComplete: any,index: number){
+ deleteQuotes(isComplete: any, index: number){
    if (isComplete){
     let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
     if (toDelete){
-      this.quotes.splice(index,1)
+      this.quotes.splice(index,1);
     }
    }
  }
@@ -36,9 +36,6 @@ export class QuotesComponent implements OnInit {
   quotes.completeDate = new Date(quotes.completeDate)
   this.quotes.push(quotes)
 }
-
-
-
   constructor() { }
 
   ngOnInit(): void {

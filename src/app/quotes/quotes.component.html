@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Inspirational Quotes</h1>
+    <h1 style="text-align: center; margin-bottom: 5;">Inspirational Quotes</h1>
     <h2>Get inspired daily</h2>
     <hr>
     <div class="row">
@@ -10,8 +10,8 @@
               <button (click)='toggleDetails(i)' class="btn btn-primary">DISPLAY</button>
             </div>
     
-            <div >
-                <!-- *ngIf='quote.showDescription' -->
+            <div *ngIf='quotes.showDescription'>
+                
               <app-quotes-detail  [quotes]='quotes' (isComplete) = 'deleteQuotes($event,i)'></app-quotes-detail>
             </div>
           </div>
